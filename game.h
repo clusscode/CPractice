@@ -2,19 +2,15 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
-#include<windows.h>
 
-#define ROW 5
-#define COL 5
+#define ROW 9
+#define COL 9
+#define ROWS ROW+2
+#define COLS COL+2
+#define COUNT 10
 
-void IntiBoard(char board[ROW][COL], int row, int col);
-/*打印棋盘，使其出现这样的棋盘
-	   |   |
-	---|---|---
-	---|---|---
-	   |   |
-	*/
-void InputBoard(char board[ROW][COL], int row, int col);
-void PlayerMove(char board[ROW][COL], int row, int col);
-void ConputerMove(char board[ROW][COL], int row, int col);
-int Check(char board[ROW][COL], int row, int col);
+
+void IntiBoard(char board[ROWS][COLS], int rows, int cols, char set);
+void InputBoard(char board[ROWS][COLS], int row, int col);
+void GiveBoard(char board[ROWS][COLS], int row, int col);
+void FindBoard(char my[ROWS][COLS], char show[ROWS][COLS], int row, int col);
